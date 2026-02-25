@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Cookies | Fighting Anemia with Flavor</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <style>
+        :root {
+            --brand-blue: #004aad;
+            --soft-blue: #f0f7ff;
+            --accent-orange: #ff7b00;
+            --text-main: #2d3436;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--brand-blue);
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .logo {
+            color: var(--white);
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 74, 173, 0.85), rgba(0, 74, 173, 0.85)), 
+                        url('https://images.unsplash.com/photo-1490138139357-fc819d02e344?auto=format&fit=crop&q=80&w=1200') center/cover;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            background: var(--accent-orange);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
+        }
+
+        /* Trust Section */
+        .benefits {
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            background: var(--white);
+        }
+
+        .card {
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            background: var(--soft-blue);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            background: #e6f0ff;
+        }
+
+        .card h3 {
+            color: var(--brand-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Product Showcase */
+        .product-focus {
+            padding: 6rem 10%;
+            display: flex;
+            align-items: center;
+            gap: 5%;
+            background: #fafafa;
+        }
+
+        .blue-box {
+            flex: 1;
+            background: var(--brand-blue);
+            aspect-ratio: 1/1;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            box-shadow: 25px 25px 0px var(--soft-blue);
+        }
+
+        .blue-box span {
+            font-size: 5rem;
+        }
+
+        .details {
+            flex: 1.2;
+        }
+
+        .details h2 {
+            font-size: 2.5rem;
+            color: var(--brand-blue);
+        }
+
+        /* Contact Section Styles */
+        .contact-section {
+            padding: 6rem 10%;
+            display: flex;
+            gap: 4rem;
+            background: var(--white);
+            align-items: center;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            color: var(--brand-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--brand-blue);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .map-container {
+            flex: 1;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #888;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .product-focus, .contact-section { flex-direction: column; text-align: center; }
+            .blue-box, .map-container { width: 100%; }
+            .contact-section { gap: 2rem; padding: 4rem 10%; }
+            .map-container { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">IRON COOKIES 🍪</div>
+        <a href="#shop" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Shop Now</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Building Stronger <br>Kids, One Bite at a Time.</h1>
+        <p>The delicious 2026 breakthrough in pediatric nutrition. Powerful iron support hidden in a cookie your kids will actually love.</p>
+        <a href="#shop" class="btn">Get My Blue Box Today</a>
+    </header>
+
+    <section class="benefits">
+        <div class="card">
+            <h3>No Metallic Aftertaste</h3>
+            <p>Our 2026 formula uses micro-encapsulated iron. All they taste is premium chocolate.</p>
+        </div>
+        <div class="card">
+            <h3>High Absorption</h3>
+            <p>Paired with natural Vitamin C to ensure the iron actually reaches their system.</p>
+        </div>
+        <div class="card">
+            <h3>Pediatrician Approved</h3>
+            <p>Trusted by thousands of families to support growth, energy, and focus.</p>
+        </div>
+    </section>
+
+    <section class="product-focus">
+        <div class="blue-box">
+            <span>🍪</span>
+            <h3>THE BLUE BOX</h3>
+            <p>7-Day Iron Supply</p>
+        </div>
+        <div class="details">
+            <h2>Look for the Blue Box</h2>
+            <p>We designed our signature blue packaging to be more than just a box—it's a symbol of health and energy. Each box is vacuum-sealed to maintain the bio-activity of our ingredients.</p>
+            <ul style="list-style: none; padding: 0;">
+                <li>✅ **1 Cookie = Daily Iron Requirement**</li>
+                <li>✅ **Eco-Friendly 2026 Materials**</li>
+                <li>✅ **Non-GMO & Low Sugar**</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="shop" style="text-align: center; padding: 6rem 10%; background: var(--brand-blue); color: white;">
+        <h2>Ready to boost their energy?</h2>
+        <p>Join the 2026 healthy generation. Subscribe and save 15% on your monthly supply.</p>
+        <br>
+        <a href="#" class="btn">Order Now - Free Shipping</a>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Visit Our Bakery</h2>
+            <p>Have questions about our 2026 nutrition formula? Visit our flagship health lab or get in touch with our experts.</p>
+            
+            <div class="contact-item">
+                <strong>Email Us</strong>
+                hello@ironcookies.com
+            </div>
+            <div class="contact-item">
+                <strong>Call Us</strong>
+                +1 (555) 123-COOKIES
+            </div>
+            <div class="contact-item">
+                <strong>Location</strong>
+                123 Nutrition Way, Health Valley, CA 90210
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.585711663579!2d-111.00548682370345!3d29.088384875418946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce83c47d54995b%3A0xf25d7bd30e79ef3!2sHighPoint%20International%20School%20Hermosillo!5e0!3m2!1ses-419!2smx!4v1770834053163!5m2!1ses-419!2smx" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Iron Cookies Nutrition Labs. All rights reserved.</p>
+        <p style="font-size: 0.8rem;">Disclaimer: Consult with your pediatrician for specific dosage based on your child's blood work.</p>
+    </footer>
+
+</body>
+</html>
